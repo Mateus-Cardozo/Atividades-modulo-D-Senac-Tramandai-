@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url() no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: azure;
+}
+header1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #063e4f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 2em;
+  color: aliceblue;
+  user-select: none;
+}
+.navegacao a {
+  position: relative;
+  font-size: 1.1em;
+  color: azure;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navegacao a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.navegacao a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.navegacao .botaoLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+.navegacao .botaoLogin-popup:hover {
+  background: #fff;
+  color: black;
+}
+.navegacao .botao-mode {
+  width: 50px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 70%;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 200;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+.navegacao .botao-mode:hover {
+  background: #fff;
+  color: black;
+}
+.Login-cadastro-popup {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: .5s ease, .2s ease;
+}
+.Login-cadastro-popup.ativar-popup{
+  transform: scale(1);
+}
+.Login-cadastro-popup.ativo {
+  height: 650px;
+}
+.Login-cadastro-popup .form-box-Login {
+  width: 100%;
+  padding: 40px;
+}
+.Login-cadastro-popup .form-box-Login {
+  transition: 0.18s ease;
+  transform: translateX(0);
+}
+.Login-cadastro-popup.ativo .form-box-Login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.Login-cadastro-popup .form-box-cadastro {
+  position: absolute;
+  transform: translateX(400px);
+}
+.Login-cadastro-popup.ativo .form-box-cadastro {
+  transition: 0.18s ease;
+  transform: translateX(0);
+}
+.Login-cadastro-popup .icon-fechar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.Login-cadastro-popup h3 {
+  font-size: 3em;
+  color: #162938;
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+/*senha flutuante*/
+.input-box input {
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 3px 0 2px;
+}
+.lembrar-senha {
+  font-size: 0.9em;
+  color: #162938;
+  font-weight: 550;
+  margin: -20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.lembrar-senha label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+.lembrar-senha a {
+  color: #162938;
+  text-decoration: none;
+}
+.lembrar-senha a:hover {
+  text-decoration: underline;
+}
+.botaoLogin {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+.cadastro-login {
+  font-size: 0.9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.cadastro-login p a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cadastro-login p a:hover {
+  text-decoration: underline;
+}
+.botaocadastro{
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
